@@ -29,13 +29,6 @@ namespace CompanyOnline.API.Controllers
             }
         }
         
-        //public EmployeeController(ILogger<EmployeeController> logger = null)
-        //{
-        //    if (null != logger)
-        //    {
-        //        _logger = logger;
-        //    }
-        //}
         //GET: api/values
         [HttpGet]
         [ActionName("Employees")]
@@ -51,6 +44,7 @@ namespace CompanyOnline.API.Controllers
             else
                 return NotFound();
         }
+
         // GET api/values/5  
         [HttpGet("{id}")]
         [ActionName("Employees")]

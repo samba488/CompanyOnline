@@ -27,22 +27,14 @@ namespace CompanyOnline.API.Controllers
             _iRepo = repo;
             _logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         }
-       
-        //private readonly ILogger<CompanyController> _logger;
-
-        //public CompanyController(ILogger<CompanyController> logger)
-        //{
-        //    this._logger = logger;
-        //}
 
         //GET: api/values
         [HttpGet]
-       [ActionName("Companies")]
+        [ActionName("Companies")]
         public IActionResult Get()
         {
-            
             _logger.Info("INFO!: Invocking repository to get all companies.");
-            
+
             var companies = _iRepo.GetAll();
             if (companies != null)
             {
@@ -52,7 +44,7 @@ namespace CompanyOnline.API.Controllers
                 return NotFound();
         }
 
-       // GET api/values/5  
+        // GET api/values/5  
         [HttpGet("{id}")]
         [ActionName("Companies")]
         public IActionResult Get(int id)
@@ -67,8 +59,8 @@ namespace CompanyOnline.API.Controllers
                 return NotFound();
         }
 
-       // POST api/values
-       [HttpPost]
+        // POST api/values
+        [HttpPost]
         [ActionName("Company")]
         public void Post([FromBody]Company company)
         {

@@ -20,7 +20,7 @@
     "CompanyOnline.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/company",
+      "launchUrl": "api/company/",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
